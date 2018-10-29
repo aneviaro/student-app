@@ -28,7 +28,7 @@ public class TestServlet extends HttpServlet {
 	public void init() throws ServletException{
 		// TODO Auto-generated method stub
 		try{
-			List<Student> students = new StudentReader("C:\\Users\\Student\\git\\student-app\\src\\main\\java\\resources\\students.csv").read();
+			List<Student> students = new StudentReader("/Users/xrustalik/eclipse-workspace/student-app/src/main/java/resources/students.csv").read();
 			studentDao=new StudentDao(students);
 		} catch(IOException e){
 			
@@ -59,7 +59,7 @@ public class TestServlet extends HttpServlet {
 	@Override
 	public void destroy() {
 		try{
-		new StudentWriter("C:\\Users\\Student\\git\\student-app\\src\\main\\java\\resources\\students.csv").write(studentDao.findAll());
+		new StudentWriter("/Users/xrustalik/eclipse-workspace/student-app/src/main/java/resources/students.csv").write(studentDao.findAll());
 		}catch (IOException e){
 			System.out.println("Error. Could not write");
 		}

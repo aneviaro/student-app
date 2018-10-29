@@ -39,7 +39,7 @@ public class TeacherServlet extends HttpServlet {
 			final int group = Integer.valueOf(groupNumber);
 			final String format = "Name: %s, Second name: %s, Group Number: %d";
 			System.out.println(String.format(format, fname, sname, group));
-			STUDENTS.add(new Student(fname, sname, group,id));
+			STUDENTS.add(new Student(fname, sname, group,String.valueOf(id)));
 			doGet(req, resp);
 		}
 		if(req.getParameter("formName").equals("delete")) {

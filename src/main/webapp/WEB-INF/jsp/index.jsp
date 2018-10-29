@@ -6,19 +6,29 @@
 <html>
 <body>
 	<form action="/student-app/students" method="POST">
-		<input type="text" name="firstName" placeholder="first name">
-		<input type="text" name="secondName" placeholder="second name">
-		<input type="text" name="groupNumber" placeholder="group">
-		<input type="submit">
+		<input type="hidden" name ="formName" value="add">
+		<div class="form-group">
+		<label for="fname">First Name</label>
+		<input type="text" name="firstName" placeholder="first name" id="fname" class="form-control">
+		</div>
+		<div class="form-group">
+		<label for="sname">Second Name</label>
+		<input type="text" name="secondName" placeholder="second name" id="sname" class="form-control">
+		</div>
+		<div class="form-group">
+		<label for="group">Group</label>
+		<input type="text" name="groupNumber" placeholder="group" id="group" class="form-control">
+		</div>
+		<button type="submit" class="btn btn-primary">Send</button>
 	</form>
 
-	<table >
+	<table class="table table-bordered" >
 		<thead>
 			<tr>
-				<th>First Name  |</th>
-				<th> Second Name |</th>
-				<th> Group Number |</th>
-				<th> Average Mark |</th>
+				<th>First Name  </th>
+				<th> Second Name </th>
+				<th> Group Number </th>
+				<th> Average Mark </th>
 			</tr>
 		</thead>
 		<tbody>

@@ -24,4 +24,13 @@
 		<servlet-name>TeacherServlet</servlet-name>
 		<url-pattern>/teachers</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>PageServlet</servlet-name>
+		<servlet-class>by.iba.user01d.web.servlet.PageServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>PageServlet</servlet-name>
+		<url-pattern>/page</url-pattern>
+	</servlet-mapping>
 </web-app>

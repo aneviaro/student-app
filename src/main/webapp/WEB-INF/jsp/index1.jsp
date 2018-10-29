@@ -41,7 +41,7 @@
 				<td align=center>${student.avgMark}</td>
 				<td>
 				<form action="/student-app/teachers" method="POST">
-					<input type="" name="id" value="${student.id}"/>
+					<input type="hidden" name="id" value="${student.id}"/>
 					<input type="submit" name="deleteButton" value="Delete"/>
 					<input type="hidden" name ="formName" value="delete"/>
 					
